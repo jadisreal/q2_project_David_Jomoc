@@ -1,41 +1,26 @@
 name: swipe_and_shop
-description: "Trade e-waste parts with people nearby — in 3 taps. Fix more. Trash less. ♻️📱"
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+description: "Trade e-waste parts with people nearby — in 3 taps. Fix more. Trash less."
+publish_to: 'none'
 version: 1.0.0+1
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
 
-# Dependencies for core functionality
 dependencies:
   flutter:
     sdk: flutter
-  camera: ^0.10.5+5       # For real camera support (future upgrade)
-  image_picker: ^1.0.4    # For picking images from camera/gallery (used now)
-  cupertino_icons: ^1.0.6 # iOS-style icons (optional but included by default)
+  camera: ^0.10.5+5
+  image_picker: ^1.0.4
+  cupertino_icons: ^1.0.6
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.0   # Recommended lints for Flutter apps
+  flutter_lints: ^3.0.0
 
-# Flutter-specific configuration
 flutter:
   uses-material-design: true
 
-  # Optional: Add custom fonts if you want (Roboto is default in Material)
-  # fonts:
-  #   - family: Roboto
-  #     fonts:
-  #       - asset: fonts/Roboto-Regular.ttf
-  #       - asset: fonts/Roboto-Bold.ttf
-  #         weight: 700
-
-  # Optional: Add launcher icons later
-  # assets:
-  #   - assets/images/
-
-  # If you want to support specific orientations (optional)
-  # android:
-  #   package: com.example.swipe_and_shop
-  #   namespace: com.example.swipe_and_shop
+  assets:
+    - assets/images/
+    - assets/images/avatars/

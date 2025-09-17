@@ -10,7 +10,7 @@ class MockDataService {
         distance: "200m",
         has: "iPhone 11 Charging Port",
         wants: "Samsung S20 Screen",
-        avatar: "https://via.placeholder.com/50/4285F4/FFFFFF?text=A",
+        avatar: "assets/images/avatars/ali.jpeg",
         unread: true,
       ),
       PartMatch(
@@ -66,7 +66,7 @@ class MockDataService {
       PartMatch(
         id: "1",
         name: "Ali",
-        avatar: "https://via.placeholder.com/50/4285F4/FFFFFF?text=A",
+        avatar: "assets/images/avatars/ali.jpeg",
         lastMessage: "Hey! I’m free this weekend.",
         time: "2m ago",
         unread: true,
@@ -78,7 +78,7 @@ class MockDataService {
       PartMatch(
         id: "3",
         name: "Raj",
-        avatar: "https://via.placeholder.com/50/DB4437/FFFFFF?text=R",
+        avatar: "assets/images/avatars/raj.jpeg",
         lastMessage: "Where’s good for you?",
         time: "1h ago",
         unread: true,
@@ -90,7 +90,7 @@ class MockDataService {
       PartMatch(
         id: "5",
         name: "Leo",
-        avatar: "https://via.placeholder.com/50/AB47BC/FFFFFF?text=L",
+        avatar: "assets/images/avatars/leo.jpeg",
         lastMessage: "Do you have time today?",
         time: "3d ago",
         unread: false,
