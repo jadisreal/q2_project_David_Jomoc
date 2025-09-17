@@ -50,7 +50,7 @@ class _TagScreenState extends State<TagScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("🏷️ Tag Your Part")),
+      appBar: AppBar(title: const Text("Tag Your Part")),
       body: Padding(
         padding: const EdgeInsets.all(24.0),
         child: Column(
@@ -84,7 +84,7 @@ class _TagScreenState extends State<TagScreen> {
             ElevatedButton(
               onPressed: () {
                 ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text("✅ Part posted! It’s now in the swipe pool.")),
+                  const SnackBar(content: Text("Part posted! It’s now in the swipe pool.")),
                 );
                 Navigator.pushNamedAndRemoveUntil(
                   context,

@@ -29,7 +29,7 @@ class SuccessScreen extends StatelessWidget {
                   const Icon(Icons.eco, size: 120, color: AppConstants.secondaryColor),
                   const SizedBox(height: 30),
                   const Text(
-                    "SWAP SUCCESSFUL! 🎉",
+                    "SWAP SUCCESSFUL!",
                     style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold, color: AppConstants.primaryColor),
                     textAlign: TextAlign.center,
                   ),
@@ -47,7 +47,7 @@ class SuccessScreen extends StatelessWidget {
                           (route) => false,
                     ),
                     icon: const Icon(Icons.refresh),
-                    label: const Text("SWAP AGAIN ♻️"),
+                    label: const Text("SWAP AGAIN"),
                   ),
                 ],
               ),

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppConstants {
   static const String appName = "Swipe & Shop";
-  static const String tagline = "Fix more. Trash less. Trade like neighbors. ♻️📱";
+  static const String tagline = "Fix more. Trash less. Trade like neighbors.";
 
   // Colors
   static const Color primaryColor = Color(0xFF2E7D32); // Green 800

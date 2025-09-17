@@ -35,9 +35,9 @@ class _HomeScreenState extends State<HomeScreen> {
     showDialog(
       context: context,
       builder: (ctx) => AlertDialog(
-        title: Text("🎉 MATCH!", style: TextStyle(color: AppConstants.primaryColor)),
+        title: Text("MATCH!", style: TextStyle(color: AppConstants.primaryColor)),
         content: Text(
-          "${match.name} wants to swap!\n\nYou: ??? ↔ Them: ${match.has}\n\n👉 Chat to arrange meetup!",
+          "${match.name} wants to swap!\n\nYou: ??? ↔ Them: ${match.has}\n\nChat to arrange meetup!",
           style: const TextStyle(fontSize: 16),
         ),
         actions: [
@@ -58,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBarWithDrawer(
-        title: "♻️ Swipe & Shop",
+        title: "Swipe & Shop",
         context: context,
         actions: [
           IconButton(

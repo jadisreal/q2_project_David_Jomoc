@@ -41,7 +41,7 @@ class _SwipeScreenState extends State<SwipeScreen> {
       builder: (ctx) => AlertDialog(
         title: Text("🎉 MATCH!", style: TextStyle(color: AppConstants.primaryColor)),
         content: Text(
-          "${match.name} wants your $partIHave and has ${match.has}!\n\n📍 ${match.distance} away\n\n👉 Tap below to chat and arrange meetup!",
+          "${match.name} wants your $partIHave and has ${match.has}!\n\n📍 ${match.distance} away\n\n Tap below to chat and arrange meetup!",
           style: const TextStyle(fontSize: 16),
         ),
         actions: [
@@ -87,7 +87,7 @@ class _SwipeScreenState extends State<SwipeScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("↔️ Swipe to Trade"),
+        title: const Text("Swipe to Trade"),
         actions: [
           IconButton(
             onPressed: () => Navigator.pushReplacementNamed(context, AppConstants.routeCamera),
