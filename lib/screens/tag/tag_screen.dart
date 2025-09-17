@@ -13,7 +13,7 @@ class TagScreen extends StatefulWidget {
 class _TagScreenState extends State<TagScreen> {
   String partName = "Detecting...";
   XFile? _image;
-  late TextEditingController _controller;
+  TextEditingController _controller = TextEditingController();
 
   @override
   void initState() {
@@ -22,7 +22,6 @@ class _TagScreenState extends State<TagScreen> {
       final args = ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>?;
       _image = args?['image'] as XFile?;
       partName = _mockAIDetect(_image?.path ?? '');
-      _controller = TextEditingController(text: partName);
     });
   }
 

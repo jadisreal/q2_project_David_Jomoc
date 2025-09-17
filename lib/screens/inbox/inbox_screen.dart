@@ -36,7 +36,9 @@ class InboxScreen extends StatelessWidget {
               leading: Stack(
                 children: [
                   CircleAvatar(
-                    backgroundImage: NetworkImage(match.avatar),
+                    backgroundImage: match.avatar.startsWith('assets/')
+                        ? AssetImage(match.avatar) as ImageProvider
+                        : NetworkImage(match.avatar),
                     radius: 24,
                   ),
                   if (match.unread)

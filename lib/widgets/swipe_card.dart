@@ -49,7 +49,9 @@ class SwipeCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CircleAvatar(
-                  backgroundImage: NetworkImage(part.avatar),
+                  backgroundImage: part.avatar.startsWith('assets/')
+                      ? AssetImage(part.avatar) as ImageProvider
+                      : NetworkImage(part.avatar),
                   radius: 40,
                 ),
                 const SizedBox(height: 16),
