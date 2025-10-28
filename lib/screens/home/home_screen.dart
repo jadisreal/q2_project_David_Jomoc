@@ -52,6 +52,10 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
     );
+
+    setState(() {
+      currentIndex = (currentIndex + 1) % parts.length;
+    });
   }
 
   @override
@@ -71,56 +75,56 @@ class _HomeScreenState extends State<HomeScreen> {
       body: parts.isEmpty
           ? const Center(child: Text("No parts available. Try snapping one!"))
           : Column(
-        children: [
-          Expanded(
-            child: SwipeDetector(
-              onSwipe: (direction) {
-                if (direction == SwipeDirection.left) {
-                  _swipeLeft();
-                } else {
-                  _swipeRight();
-                }
-              },
-              child: AnimatedSwitcher(
-                duration: const Duration(milliseconds: 300),
-                child: SwipeCard(
-                  key: ValueKey(currentIndex),
-                  part: parts[currentIndex],
-                ),
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(bottom: 32.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ElevatedButton.icon(
-                  onPressed: _swipeLeft,
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: AppConstants.swipeReject,
-                    foregroundColor: Colors.grey[800],
-                    shape: const CircleBorder(),
-                    padding: const EdgeInsets.all(24),
+                Expanded(
+                  child: SwipeDetector(
+                    onSwipe: (direction) {
+                      if (direction == SwipeDirection.left) {
+                        _swipeLeft();
+                      } else {
+                        _swipeRight();
+                      }
+                    },
+                    child: AnimatedSwitcher(
+                      duration: const Duration(milliseconds: 300),
+                      child: SwipeCard(
+                        key: ValueKey(currentIndex),
+                        part: parts[currentIndex],
+                      ),
+                    ),
                   ),
-                  icon: const Icon(Icons.close, size: 30),
-                  label: const Text(""),
                 ),
-                ElevatedButton.icon(
-                  onPressed: _swipeRight,
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: AppConstants.swipeAccept,
-                    shape: const CircleBorder(),
-                    padding: const EdgeInsets.all(24),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 32.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      ElevatedButton.icon(
+                        onPressed: _swipeLeft,
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: AppConstants.swipeReject,
+                          foregroundColor: Colors.grey[800],
+                          shape: const CircleBorder(),
+                          padding: const EdgeInsets.all(24),
+                        ),
+                        icon: const Icon(Icons.close, size: 30),
+                        label: const Text(""),
+                      ),
+                      ElevatedButton.icon(
+                        onPressed: _swipeRight,
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: AppConstants.swipeAccept,
+                          shape: const CircleBorder(),
+                          padding: const EdgeInsets.all(24),
+                        ),
+                        icon: const Icon(Icons.favorite, size: 30, color: Colors.white),
+                        label: const Text(""),
+                      ),
+                    ],
                   ),
-                  icon: const Icon(Icons.favorite, size: 30, color: Colors.white),
-                  label: const Text(""),
                 ),
               ],
             ),
-          ),
-        ],
-      ),
     );
   }
 }

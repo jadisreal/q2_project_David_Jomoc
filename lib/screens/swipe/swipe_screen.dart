@@ -24,6 +24,7 @@ class _SwipeScreenState extends State<SwipeScreen> {
       final args = ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>?;
       partIHave = args?['partIHave'] ?? "Unknown Part";
       mockTrades = MockDataService.getAvailableParts();
+      setState(() {});
     });
   }
 
@@ -56,6 +57,10 @@ class _SwipeScreenState extends State<SwipeScreen> {
         ],
       ),
     );
+
+    setState(() {
+      currentIndex = (currentIndex + 1) % mockTrades.length;
+    });
   }
 
   @override
